@@ -24,6 +24,20 @@ namespace Persistencia
             return abrirArquivo();
         }
 
+        public void Update(Modelo.Disciplina d)
+        {
+            List<Modelo.Disciplina> disciplinas = abrirArquivo();
+            disciplinas.Insert(disciplinas.FindIndex(dis => dis.Id == d.Id), d);
+            salvarArquivo(disciplinas);
+
+        }
+
+        public void Delete(Modelo.Disciplina d)
+        {
+            List<Modelo.Disciplina> disciplinas = abrirArquivo();
+            disciplinas.Remove(d);
+        }
+
         private List<Modelo.Disciplina> abrirArquivo()
         {
             List<Modelo.Disciplina> disciplinas = null;

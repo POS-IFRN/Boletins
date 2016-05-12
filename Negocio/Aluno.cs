@@ -22,5 +22,19 @@ namespace Negocio
         {
             return new Persistencia.Aluno().Select();
         }
+
+        public void Update(Modelo.Aluno a)
+        {
+            List<Modelo.Aluno> alunos = Select();
+            if (alunos.Exists(al => al.Id == a.Id))
+                new Persistencia.Aluno().Update(a);
+        }
+
+        public void Delete(Modelo.Aluno a)
+        {
+            List<Modelo.Aluno> alunos = Select();
+            if (alunos.Exists(al => al.Id == a.Id))
+                new Persistencia.Aluno().Delete(a);
+        }
     }
 }

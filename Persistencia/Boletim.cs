@@ -24,6 +24,23 @@ namespace Persistencia
             return abrirArquivo();
         }
 
+        public void Update(Modelo.Boletim b)
+        {
+            List<Modelo.Boletim> boletins = abrirArquivo();
+            boletins.Insert(boletins.FindIndex(bol => 
+            bol.Ano == b.Ano && 
+            bol.IdAluno == b.IdAluno &&
+            bol.IdDisciplina == b.IdDisciplina), b);
+            salvarArquivo(boletins);
+
+        }
+
+        public void Delete(Modelo.Boletim b)
+        {
+            List<Modelo.Boletim> boletins = abrirArquivo();
+            boletins.Remove(b);
+        }
+
         private List<Modelo.Boletim> abrirArquivo()
         {
             List<Modelo.Boletim> boletins = null;

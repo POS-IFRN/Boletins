@@ -24,6 +24,20 @@ namespace Persistencia
             return abrirArquivo();
         }
 
+        public void Update(Modelo.Aluno a)
+        {
+            List<Modelo.Aluno> alunos = abrirArquivo();
+            alunos.Insert(alunos.FindIndex(al => al.Id == a.Id), a);
+            salvarArquivo(alunos);
+
+        }
+
+        public void Delete(Modelo.Aluno a)
+        {
+            List<Modelo.Aluno> alunos = abrirArquivo();
+            alunos.Remove(a);
+        }
+
         private List<Modelo.Aluno> abrirArquivo()
         {
             List<Modelo.Aluno> alunos = null;

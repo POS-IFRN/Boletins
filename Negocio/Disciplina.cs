@@ -21,5 +21,23 @@ namespace Negocio
         {
             return new Persistencia.Disciplina().Select();
         }
+
+        public void Update(Modelo.Disciplina d)
+        {
+            List<Modelo.Disciplina> disciplinas = Select();
+            if (disciplinas.Exists(dis => dis.Id == d.Id))
+            {
+                new Persistencia.Disciplina().Update(d);
+            }
+        }
+
+        public void Delete(Modelo.Disciplina d)
+        {
+            List<Modelo.Disciplina> disciplinas = Select();
+            if (disciplinas.Exists(dis => dis.Id == d.Id))
+            {
+                new Persistencia.Disciplina().Delete(d);
+            }
+        }
     }
 }
