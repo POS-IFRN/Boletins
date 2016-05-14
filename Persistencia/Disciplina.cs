@@ -28,6 +28,7 @@ namespace Persistencia
         {
             List<Modelo.Disciplina> disciplinas = abrirArquivo();
             disciplinas.Insert(disciplinas.FindIndex(dis => dis.Id == d.Id), d);
+            disciplinas.RemoveAt(disciplinas.FindLastIndex(dis => dis.Id == d.Id));
             salvarArquivo(disciplinas);
 
         }
@@ -35,7 +36,8 @@ namespace Persistencia
         public void Delete(Modelo.Disciplina d)
         {
             List<Modelo.Disciplina> disciplinas = abrirArquivo();
-            disciplinas.Remove(d);
+            disciplinas.RemoveAt(disciplinas.FindIndex(dis => dis.Id == d.Id));
+            salvarArquivo(disciplinas);
         }
 
         private List<Modelo.Disciplina> abrirArquivo()

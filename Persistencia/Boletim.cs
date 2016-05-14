@@ -31,14 +31,23 @@ namespace Persistencia
             bol.Ano == b.Ano && 
             bol.IdAluno == b.IdAluno &&
             bol.IdDisciplina == b.IdDisciplina), b);
+            boletins.RemoveAt(boletins.FindLastIndex(bol =>
+            bol.Ano == b.Ano &&
+            bol.IdAluno == b.IdAluno &&
+            bol.IdDisciplina == b.IdDisciplina));
             salvarArquivo(boletins);
+            
 
         }
 
         public void Delete(Modelo.Boletim b)
         {
             List<Modelo.Boletim> boletins = abrirArquivo();
-            boletins.Remove(b);
+            boletins.RemoveAt(boletins.FindLastIndex(bol =>
+           bol.Ano == b.Ano &&
+           bol.IdAluno == b.IdAluno &&
+           bol.IdDisciplina == b.IdDisciplina));
+            salvarArquivo(boletins);
         }
 
         private List<Modelo.Boletim> abrirArquivo()
