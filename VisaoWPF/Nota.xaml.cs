@@ -24,6 +24,20 @@ namespace VisaoWPF
             InitializeComponent();
         }
 
+        private void setAlunosItemSource()
+        {
+            listAlunos.ItemsSource = new Negocio.Aluno().Select();
+            listAlunos.DisplayMemberPath = "Nome";
+            listAlunos.SelectedValuePath = "Id";
+        }
+
+        private void setDisciplinasItemSource()
+        {
+            listDisciplina.ItemsSource = new Negocio.Disciplina().Select();
+            listDisciplina.DisplayMemberPath = "Descricao";
+            listDisciplina.SelectedValuePath = "Id";
+        }
+
         private void btnInserir_Click(object sender, RoutedEventArgs e)
         {
             Modelo.Boletim b = new Modelo.Boletim();
