@@ -49,7 +49,8 @@ namespace VisaoWPF
         {
             new Negocio.Disciplina().Update(new Modelo.Disciplina
             {
-                Id = int.Parse(txtID.Text)
+                Id = int.Parse(txtID.Text),
+                Descricao = txtDesc.Text
             });
         }
 
@@ -58,7 +59,6 @@ namespace VisaoWPF
             new Negocio.Disciplina().Delete(new Modelo.Disciplina
             {
                 Id = int.Parse(txtID.Text),
-                Descricao = txtDesc.Text
             });
         }
     }
