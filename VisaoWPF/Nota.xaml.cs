@@ -95,23 +95,8 @@ namespace VisaoWPF
         {
             Modelo.Boletim b = new Modelo.Boletim();
             b.Ano = int.Parse(txtAno.Text);
-            b.Nota1 = int.Parse(txtNota1.Text);
-            b.Nota2 = int.Parse(txtNota2.Text);
-            b.Nota3 = int.Parse(txtNota3.Text);
-            b.Nota4 = int.Parse(txtNota3.Text);
             b.IdAluno = Convert.ToInt16(listAlunos.SelectedValue);
             b.IdDisciplina = Convert.ToInt16(listDisciplina.SelectedValue);
-            b.MediaParcial = (int.Parse(txtNota1.Text) + int.Parse(txtNota2.Text) + int.Parse(txtNota3.Text) + int.Parse(txtNota4.Text)) / 4;
-            if (b.MediaParcial < 6)
-            {
-                b.NotaFinal = int.Parse(txtNotaFinal.Text);
-                b.MediaFinal = b.MediaParcial + b.NotaFinal / 2;
-            }
-            else
-            {
-                b.NotaFinal = 0;
-                b.MediaFinal = b.MediaParcial;
-            }
             new Negocio.Boletim().Delete(b);
         }
     }

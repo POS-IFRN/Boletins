@@ -44,5 +44,31 @@ namespace VisaoWPF
                 IdCurso = Convert.ToInt16(listBox.SelectedValue)
             });
         }
+
+        private void btnListar_Click(object sender, RoutedEventArgs e)
+        {
+            dataGrid.ItemsSource = new Negocio.Aluno().Select();
+        }
+
+        private void btnAtualizar_Click(object sender, RoutedEventArgs e)
+        {
+            new Negocio.Aluno().Update(new Modelo.Aluno
+            {
+                Id = int.Parse(txtId.Text),
+                Nome = txtNome.Text,
+                email = txtEmail.Text,
+                fone = txtFone.Text,
+                nascimento = Convert.ToDateTime(dtNascimento.SelectedDate),
+                IdCurso = Convert.ToInt16(listBox.SelectedValue)
+            });
+        }
+
+        private void btnDeletar_Click(object sender, RoutedEventArgs e)
+        {
+            new Negocio.Aluno().Delete(new Modelo.Aluno
+            {
+                Id = int.Parse(txtId.Text)
+            });
+        }
     }
 }

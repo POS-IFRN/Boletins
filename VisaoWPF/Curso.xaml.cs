@@ -57,8 +57,7 @@ namespace VisaoWPF
         {
             new Negocio.Curso().Delete(new Modelo.Curso
             {
-                Id = int.Parse(txtID.Text),
-                Descricao = txtDesc.Text
+                Id = int.Parse(txtID.Text)
             });
         }
     }
