@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Negocio", "Negocio\Negocio.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisaoWPF", "VisaoWPF\VisaoWPF.csproj", "{4224D6F5-B11D-4578-8DC1-B7ECC7886472}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisaoMVC", "VisaoMVC\VisaoMVC.csproj", "{A82E69C1-2CF9-497D-A0E5-E8885F61679B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{4224D6F5-B11D-4578-8DC1-B7ECC7886472}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4224D6F5-B11D-4578-8DC1-B7ECC7886472}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4224D6F5-B11D-4578-8DC1-B7ECC7886472}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A82E69C1-2CF9-497D-A0E5-E8885F61679B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A82E69C1-2CF9-497D-A0E5-E8885F61679B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A82E69C1-2CF9-497D-A0E5-E8885F61679B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A82E69C1-2CF9-497D-A0E5-E8885F61679B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
