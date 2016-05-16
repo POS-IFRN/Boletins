@@ -42,5 +42,11 @@ namespace VisaoWPF
             var abrir = new Disciplina();
             abrir.Show();
         }
+
+        private void MenuItem_Click_3(object sender, RoutedEventArgs e)
+        {
+            var abrir = new Nota();
+            abrir.Show();
+        }
     }
 }

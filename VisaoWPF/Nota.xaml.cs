@@ -22,6 +22,8 @@ namespace VisaoWPF
         public Nota()
         {
             InitializeComponent();
+            setAlunosItemSource();
+            setDisciplinasItemSource();
         }
 
         private void setAlunosItemSource()

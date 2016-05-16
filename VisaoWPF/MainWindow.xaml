@@ -12,7 +12,7 @@
             <MenuItem Header="Disciplina" Click="MenuItem_Click_2" />
             <MenuItem Header="Aluno">
                 <MenuItem Header="CRUD Aluno" Click="MenuItem_Click_1"/>
-                <MenuItem Header="Cadastrar notas" />
+                <MenuItem Header="Cadastrar notas" Click="MenuItem_Click_3" />
             </MenuItem>
 
 
