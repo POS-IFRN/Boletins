@@ -22,6 +22,7 @@ namespace VisaoWPFSQL
         public Aluno()
         {
             InitializeComponent();
+            setItemsSource();
         }
 
         private void setItemsSource()
@@ -46,6 +47,7 @@ namespace VisaoWPFSQL
 
         private void btnListar_Click(object sender, RoutedEventArgs e)
         {
+            dataGrid.ItemsSource = null;
             dataGrid.ItemsSource = new NegocioSQL.Aluno().Select();
         }
 

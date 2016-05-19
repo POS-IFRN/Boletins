@@ -43,5 +43,16 @@ namespace PersistenciaWithSQL.Properties {
                 return ((string)(this["EscolaConnectionString1"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-C6TR273\\SQLEXPRESS;Initial Catalog=Escola;Persist Security In" +
+            "fo=True;User ID=sa;Password=Senha@123")]
+        public string EscolaConnectionString2 {
+            get {
+                return ((string)(this["EscolaConnectionString2"]));
+            }
+        }
     }
 }

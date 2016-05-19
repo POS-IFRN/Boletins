@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VisaoWPFSQL"
         mc:Ignorable="d"
-        Title="Curso" Height="300" Width="300">
+        Title="Curso" Height="300" Width="478.505">
     <Grid Margin="0,0,0,213">
         <GroupBox Header="CRUD Curso" Margin="0,0,0,-22">
             <Grid Margin="0,0,0,-12">

@@ -23,7 +23,7 @@ namespace PersistenciaWithSQL
 	
 	
 	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="Escola")]
-	public partial class SqlClassesDataContext : System.Data.Linq.DataContext
+	public partial class EscolaDataContext : System.Data.Linq.DataContext
 	{
 		
 		private static System.Data.Linq.Mapping.MappingSource mappingSource = new AttributeMappingSource();
@@ -44,31 +44,31 @@ namespace PersistenciaWithSQL
     partial void DeleteDisciplina(Disciplina instance);
     #endregion
 		
-		public SqlClassesDataContext() : 
-				base(global::PersistenciaWithSQL.Properties.Settings.Default.EscolaConnectionString1, mappingSource)
+		public EscolaDataContext() : 
+				base(global::PersistenciaWithSQL.Properties.Settings.Default.EscolaConnectionString2, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public SqlClassesDataContext(string connection) : 
+		public EscolaDataContext(string connection) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public SqlClassesDataContext(System.Data.IDbConnection connection) : 
+		public EscolaDataContext(System.Data.IDbConnection connection) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public SqlClassesDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+		public EscolaDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public SqlClassesDataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+		public EscolaDataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
@@ -121,7 +121,7 @@ namespace PersistenciaWithSQL
 		
 		private string _fone;
 		
-		private string _nascimento;
+		private System.Nullable<System.DateTime> _nascimento;
 		
 		private System.Nullable<int> _idCurso;
 		
@@ -141,7 +141,7 @@ namespace PersistenciaWithSQL
     partial void OnemailChanged();
     partial void OnfoneChanging(string value);
     partial void OnfoneChanged();
-    partial void OnnascimentoChanging(string value);
+    partial void OnnascimentoChanging(System.Nullable<System.DateTime> value);
     partial void OnnascimentoChanged();
     partial void OnidCursoChanging(System.Nullable<int> value);
     partial void OnidCursoChanged();
@@ -154,7 +154,7 @@ namespace PersistenciaWithSQL
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int id
 		{
 			get
@@ -234,8 +234,8 @@ namespace PersistenciaWithSQL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nascimento", DbType="VarChar(50)")]
-		public string nascimento
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nascimento", DbType="DateTime")]
+		public System.Nullable<System.DateTime> nascimento
 		{
 			get
 			{
@@ -746,7 +746,7 @@ namespace PersistenciaWithSQL
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int id
 		{
 			get
@@ -860,7 +860,7 @@ namespace PersistenciaWithSQL
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int id
 		{
 			get

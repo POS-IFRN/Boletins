@@ -9,7 +9,6 @@ namespace NegocioSQL
 {
     public class Curso
     {
-        private PersistenciaWithSQL.SqlClassesDataContext dc = new PersistenciaWithSQL.SqlClassesDataContext();
   
         public void Insert(Modelo.Curso curs)
         {

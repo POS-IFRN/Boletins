@@ -1,12 +1,12 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Escola" Class="SqlClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=ISAAC-PC\ISAACMDRS;Initial Catalog=Escola;User ID=sa" SettingsObjectName="PersistenciaWithSQL.Properties.Settings" SettingsPropertyName="EscolaConnectionString1" Provider="System.Data.SqlClient" />
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Escola" Class="EscolaDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-C6TR273\SQLEXPRESS;Initial Catalog=Escola;Persist Security Info=True;User ID=sa" SettingsObjectName="PersistenciaWithSQL.Properties.Settings" SettingsPropertyName="EscolaConnectionString2" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Aluno" Member="Alunos">
     <Type Name="Aluno">
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="nome" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="fone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="nascimento" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="nascimento" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="idCurso" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="Aluno_Boletim" Member="Boletims" ThisKey="id" OtherKey="idAluno" Type="Boletim" />
       <Association Name="Curso_Aluno" Member="Curso" ThisKey="idCurso" OtherKey="id" Type="Curso" IsForeignKey="true" />
@@ -30,14 +30,14 @@
   </Table>
   <Table Name="dbo.Curso" Member="Cursos">
     <Type Name="Curso">
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="descricao" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Association Name="Curso_Aluno" Member="Alunos" ThisKey="id" OtherKey="idCurso" Type="Aluno" />
     </Type>
   </Table>
   <Table Name="dbo.Disciplina" Member="Disciplinas">
     <Type Name="Disciplina">
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="descricao" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Association Name="Disciplina_Boletim" Member="Boletims" ThisKey="id" OtherKey="idDisciplina" Type="Boletim" />
     </Type>

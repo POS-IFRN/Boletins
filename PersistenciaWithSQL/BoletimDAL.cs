@@ -8,7 +8,7 @@ namespace PersistenciaWithSQL
 {
     public class BoletimDAL
     {
-        private SqlClassesDataContext dc = new SqlClassesDataContext();
+        private EscolaDataContext dc = new EscolaDataContext();
         public void Insert(Modelo.Boletim bole)
         {
             Boletim b = new Boletim

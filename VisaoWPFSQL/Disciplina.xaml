@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VisaoWPFSQL"
         mc:Ignorable="d"
-        Title="Disciplina" Height="300" Width="300">
+        Title="Disciplina" Height="300" Width="480.374">
     <Grid>
         <GroupBox Header="CRUD Curso" Margin="0,0,0,183">
-            <Grid Margin="0,-29,0,17">
+            <Grid Margin="0,-29,0,-12">
                 <TextBlock Text="ID" Margin="5,25,422,21" />
                 <TextBox x:Name="txtID" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="ID" VerticalAlignment="Top" Width="37" Margin="5,44,0,0"/>
                 <TextBox x:Name="txtDesc" HorizontalAlignment="Left" Height="36" TextWrapping="Wrap" Text="Descrição" VerticalAlignment="Top" Width="142" Margin="47,41,0,0"/>
