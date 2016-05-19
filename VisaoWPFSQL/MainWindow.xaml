@@ -1,0 +1,22 @@
+﻿<Window x:Class="VisaoWPFSQL.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VisaoWPFSQL"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Menu x:Name="menu" Height="25" VerticalAlignment="Top">
+            <MenuItem Header="Curso" Click="MenuItem_Click" />
+            <MenuItem Header="Disciplina" Click="MenuItem_Click_2" />
+            <MenuItem Header="Aluno">
+                <MenuItem Header="CRUD Aluno" Click="MenuItem_Click_1"/>
+                <MenuItem Header="Cadastrar notas" Click="MenuItem_Click_3" />
+            </MenuItem>
+
+
+        </Menu>
+
+    </Grid>
+</Window>

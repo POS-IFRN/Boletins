@@ -1,0 +1,30 @@
+﻿<Window x:Class="VisaoWPFSQL.Nota"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VisaoWPFSQL"
+        mc:Ignorable="d"
+        Title="Nota" Height="300" Width="300">
+    <Grid>
+        <GroupBox x:Name="groupBox" Header="GroupBox" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="173" Width="353">
+            <Grid>
+                <TextBox x:Name="txtAno" HorizontalAlignment="Left" Height="23" Margin="0,10,0,0" TextWrapping="Wrap" Text="Ano" VerticalAlignment="Top" Width="61"/>
+                <TextBox x:Name="txtNota1" HorizontalAlignment="Left" Height="23" Margin="0,38,0,0" TextWrapping="Wrap" Text="Nota1" VerticalAlignment="Top" Width="61"/>
+                <TextBox x:Name="txtNota2" HorizontalAlignment="Left" Height="23" Margin="0,66,0,0" TextWrapping="Wrap" Text="Nota2" VerticalAlignment="Top" Width="61"/>
+                <TextBox x:Name="txtNota3" HorizontalAlignment="Left" Height="23" Margin="0,94,0,0" TextWrapping="Wrap" Text="Nota3" VerticalAlignment="Top" Width="61"/>
+                <TextBox x:Name="txtNota4" HorizontalAlignment="Left" Height="23" Margin="0,122,0,0" TextWrapping="Wrap" Text="Nota4" VerticalAlignment="Top" Width="61"/>
+                <ListBox x:Name="listAlunos" HorizontalAlignment="Left" Height="33" Margin="83,70,0,0" VerticalAlignment="Top" Width="148"/>
+                <ListBox x:Name="listDisciplina" HorizontalAlignment="Left" Height="33" Margin="83,108,0,0" VerticalAlignment="Top" Width="148"/>
+                <Button x:Name="btnInserir" Content="Inserir" HorizontalAlignment="Left" Margin="256,10,0,0" VerticalAlignment="Top" Width="75" Click="btnInserir_Click"/>
+                <Button x:Name="btnListar" Content="Listar" HorizontalAlignment="Left" Margin="256,35,0,0" VerticalAlignment="Top" Width="75" Click="btnListar_Click"/>
+                <Button x:Name="btnAtualizar" Content="Atualizar" HorizontalAlignment="Left" Margin="256,60,0,0" VerticalAlignment="Top" Width="75" Click="btnAtualizar_Click"/>
+                <Button x:Name="btnDeletar" Content="Deletar" HorizontalAlignment="Left" Margin="256,85,0,0" VerticalAlignment="Top" Width="75" Click="btnDeletar_Click"/>
+                <TextBox x:Name="txtNotaFinal" HorizontalAlignment="Left" Height="23" Margin="83,11,0,0" TextWrapping="Wrap" Text="Nota final" VerticalAlignment="Top" Width="61"/>
+
+            </Grid>
+        </GroupBox>
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="10,188,0,0" VerticalAlignment="Top" Height="152" Width="353"/>
+
+    </Grid>
+</Window>

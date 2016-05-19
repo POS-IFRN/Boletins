@@ -51,9 +51,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="SqlClasses.cs">
-      <DependentUpon>SqlClasses.dbml</DependentUpon>
-    </Compile>
     <Compile Include="SqlClasses.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -76,15 +73,15 @@
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="SqlClasses.dbml.layout">
-      <DependentUpon>SqlClasses.dbml</DependentUpon>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Modelo\Modelo.csproj">
       <Project>{b1cb2f2d-73a4-4bff-a05b-301d074e3324}</Project>
       <Name>Modelo</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SqlClasses.dbml.layout">
+      <DependentUpon>SqlClasses.dbml</DependentUpon>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

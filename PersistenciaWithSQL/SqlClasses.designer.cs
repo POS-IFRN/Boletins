@@ -45,7 +45,7 @@ namespace PersistenciaWithSQL
     #endregion
 		
 		public SqlClassesDataContext() : 
-				base(global::PersistenciaWithSQL.Properties.Settings.Default.EscolaConnectionString, mappingSource)
+				base(global::PersistenciaWithSQL.Properties.Settings.Default.EscolaConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}
@@ -121,7 +121,7 @@ namespace PersistenciaWithSQL
 		
 		private string _fone;
 		
-		private System.Nullable<System.DateTime> _nascimento;
+		private string _nascimento;
 		
 		private System.Nullable<int> _idCurso;
 		
@@ -141,7 +141,7 @@ namespace PersistenciaWithSQL
     partial void OnemailChanged();
     partial void OnfoneChanging(string value);
     partial void OnfoneChanged();
-    partial void OnnascimentoChanging(System.Nullable<System.DateTime> value);
+    partial void OnnascimentoChanging(string value);
     partial void OnnascimentoChanged();
     partial void OnidCursoChanging(System.Nullable<int> value);
     partial void OnidCursoChanged();
@@ -154,7 +154,7 @@ namespace PersistenciaWithSQL
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Int NOT NULL", IsPrimaryKey=true)]
 		public int id
 		{
 			get
@@ -234,8 +234,8 @@ namespace PersistenciaWithSQL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nascimento", DbType="DateTime")]
-		public System.Nullable<System.DateTime> nascimento
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nascimento", DbType="VarChar(50)")]
+		public string nascimento
 		{
 			get
 			{
@@ -746,7 +746,7 @@ namespace PersistenciaWithSQL
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Int NOT NULL", IsPrimaryKey=true)]
 		public int id
 		{
 			get
@@ -860,7 +860,7 @@ namespace PersistenciaWithSQL
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Int NOT NULL", IsPrimaryKey=true)]
 		public int id
 		{
 			get
