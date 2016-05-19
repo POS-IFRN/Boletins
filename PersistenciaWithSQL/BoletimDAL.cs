@@ -6,14 +6,11 @@ using System.Threading.Tasks;
 
 namespace PersistenciaWithSQL
 {
-    class BoletimDAL
+    public class BoletimDAL
     {
         private SqlClassesDataContext dc = new SqlClassesDataContext();
         public void Insert(Modelo.Boletim bole)
         {
-            List<Modelo.Disciplina> disciplinas = new DisciplinaDAL().Select();
-            Modelo.Disciplina dis = (from d in disciplinas where d.Id == bole.IdDisciplina select d).Single();
-
             Boletim b = new Boletim
             {
                 ano = bole.Ano,

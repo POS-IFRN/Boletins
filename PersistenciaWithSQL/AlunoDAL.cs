@@ -6,14 +6,12 @@ using System.Threading.Tasks;
 
 namespace PersistenciaWithSQL
 {
-    class AlunoDAL
+    public class AlunoDAL
     {
         private SqlClassesDataContext dc = new SqlClassesDataContext();
 
         public void Insert(Modelo.Aluno alun)
         {
-            List<Modelo.Curso> cursos = new CursoDAL().Select();
-            Modelo.Curso cur = (from c in cursos where c.Id == alun.IdCurso select c).Single();
             Aluno alu = new Aluno
             {
                 id = alun.Id,
@@ -51,8 +49,6 @@ namespace PersistenciaWithSQL
 
         public void Update(Modelo.Aluno alun)
         {
-            List<Modelo.Curso> cursos = new CursoDAL().Select();
-            Modelo.Curso cur = (from c in cursos where c.Id == alun.IdCurso select c).Single();
             Aluno alu = (from a in dc.Alunos where a.id == alun.Id select a).Single();
             alu.nome = alun.Nome;
             alu.fone = alun.fone;

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PersistenciaWithSQL
 {
-    class DisciplinaDAL
+    public class DisciplinaDAL
     {
         private SqlClassesDataContext dc = new SqlClassesDataContext();
 

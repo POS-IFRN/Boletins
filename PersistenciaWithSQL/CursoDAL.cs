@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PersistenciaWithSQL
 {
-    class CursoDAL
+    public class CursoDAL
     {
         private SqlClassesDataContext dc = new SqlClassesDataContext();
 

@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisaoWebForm", "VisaoWebFor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersistenciaWithSQL", "PersistenciaWithSQL\PersistenciaWithSQL.csproj", "{A1B1D120-65C8-4B3F-ACC4-D2E3CD549553}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NegocioSQL", "NegocioSQL\NegocioSQL.csproj", "{803A3497-54B7-4E3F-92B8-C25113A07AC7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{A1B1D120-65C8-4B3F-ACC4-D2E3CD549553}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1B1D120-65C8-4B3F-ACC4-D2E3CD549553}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1B1D120-65C8-4B3F-ACC4-D2E3CD549553}.Release|Any CPU.Build.0 = Release|Any CPU
+		{803A3497-54B7-4E3F-92B8-C25113A07AC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{803A3497-54B7-4E3F-92B8-C25113A07AC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{803A3497-54B7-4E3F-92B8-C25113A07AC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{803A3497-54B7-4E3F-92B8-C25113A07AC7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
